@@ -1,6 +1,6 @@
 import { ContentChildren } from "@angular/core"
 
-export interface Post {
+export interface Posts {
     data:Children;
 }
 
@@ -11,4 +11,5 @@ export interface Children {
 export interface SinglePost {
     title:string;
     thumbnail:string;
+    permalink:string;
 }

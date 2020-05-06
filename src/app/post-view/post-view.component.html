@@ -1,3 +1,5 @@
-<div *ngFor="let p of post.data?.children">
-    {{p.title}}
+<div>
+    <strong><a href = "https://www.reddit.com{{singlePost.permalink}}">{{singlePost.title}}</a></strong><br>
+    <img src={{singlePost.thumbnail}}/>
+
 </div>

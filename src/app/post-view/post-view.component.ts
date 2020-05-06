@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { APIRequestService } from '../apirequest.service';
-import { Post, SinglePost } from '../interfaces/post';
+import { Posts, SinglePost } from '../interfaces/posts';
 
 @Component({
   selector: 'app-post-view',
@@ -8,15 +8,11 @@ import { Post, SinglePost } from '../interfaces/post';
   styleUrls: ['./post-view.component.css']
 })
 export class PostViewComponent implements OnInit {
-post:Post;
+@Input() singlePost:SinglePost;
 
   constructor(private apiserv:APIRequestService) { }
 
   ngOnInit(): void {
-    this.apiserv.getPosts().subscribe(
-      (data: Post) => this.post = { ...data },
-      error => console.error(error)
-    );
   }
 
 }

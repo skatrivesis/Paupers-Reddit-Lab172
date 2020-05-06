@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Post } from './interfaces/post';
+import { Posts } from './interfaces/posts';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +11,6 @@ export class APIRequestService {
   constructor(private http:HttpClient) { }
 
   getPosts() {
-    return this.http.get<Post>(`${this.apiUrl}/r/aww/.json`);
+    return this.http.get<Posts>(`${this.apiUrl}/r/aww/.json`);
   }
 }
